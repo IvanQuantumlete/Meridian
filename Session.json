@@ -1,0 +1,22 @@
+{
+  "name": "Session",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Session title, auto-generated or user-renamed"
+    },
+    "last_message_preview": {
+      "type": "string",
+      "description": "Preview of the last message in the session"
+    },
+    "message_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of messages in this session"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

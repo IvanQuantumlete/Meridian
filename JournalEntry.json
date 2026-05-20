@@ -1,0 +1,37 @@
+{
+  "name": "JournalEntry",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the journal entry"
+    },
+    "content": {
+      "type": "string",
+      "description": "The full text content of the journal entry"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "reflective",
+        "anxious",
+        "clear",
+        "uncertain",
+        "determined",
+        "lost"
+      ],
+      "description": "Emotional tone of the entry"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags or themes for this entry"
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ]
+}

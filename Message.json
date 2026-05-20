@@ -1,0 +1,45 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "session_id": {
+      "type": "string",
+      "description": "ID of the session this message belongs to"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "user",
+        "assistant"
+      ],
+      "description": "Who sent the message"
+    },
+    "content": {
+      "type": "string",
+      "description": "The message text content"
+    },
+    "input_type": {
+      "type": "string",
+      "enum": [
+        "text",
+        "voice",
+        "video"
+      ],
+      "default": "text",
+      "description": "Whether input was typed, spoken, or video"
+    },
+    "audio_url": {
+      "type": "string",
+      "description": "URL of the voice recording if input was voice"
+    },
+    "video_url": {
+      "type": "string",
+      "description": "URL of the uploaded video if input was video"
+    }
+  },
+  "required": [
+    "session_id",
+    "role",
+    "content"
+  ]
+}
